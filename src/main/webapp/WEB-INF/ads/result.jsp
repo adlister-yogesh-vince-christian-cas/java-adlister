@@ -11,14 +11,23 @@
 <jsp:include page="/WEB-INF/partials/navbar-ads-index.jsp" />
 
 <div class="container">
-    <h1>Here is the ad you are looking for!</h1>
+    <c:choose>
 
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <a href="/ad?id=${ad.id}"><h2>${ad.title}</h2></a>
-            <p>${ad.description}</p>
-        </div>
-    </c:forEach>
+        <c:when test="${empty ads}">
+            <h2>No results found</h2>
+        </c:when>
+
+        <c:otherwise>
+            <h1>Here is the ad you are looking for!</h1>
+            <c:forEach var="ad" items="${ads}">
+                <div class="col-md-6">
+                    <a href="/ad?id=${ad.id}"><h2>${ad.title}</h2></a>
+                    <p>${ad.description}</p>
+                </div>
+            </c:forEach>
+        </c:otherwise>
+    </c:choose>
+
 </div>
 </body>
 </html>
