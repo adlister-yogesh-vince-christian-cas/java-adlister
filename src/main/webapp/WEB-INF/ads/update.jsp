@@ -26,6 +26,9 @@
         <label for="description">Description</label>
         <textarea id="description" name="description" class="form-control" type="text" required></textarea>
       </div>
+      <c:if test="${invalidAdInput}">
+        <small>No fields left blank.</small>
+      </c:if>
       <input type="submit" class="btn btn-block btn-primary" value="Update Ad">
     </form>
   </div>

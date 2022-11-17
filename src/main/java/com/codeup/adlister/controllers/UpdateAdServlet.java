@@ -32,11 +32,18 @@ public class UpdateAdServlet extends HttpServlet {
         String description = request.getParameter("description");
         Long id = Long.valueOf(request.getParameter("adId"));
 
+        boolean invalidAdInput = title.isEmpty() || description.isEmpty();
+        if (invalidAdInput)
+        {
+            request.setAttribute("inputIsNull", true);
+            request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
+        } else
+        {
+            // Using DAO factory to access our update method.
+            DaoFactory.getAdsDao().updateAd(id, title, description);
 
-        // Using DAO factory to access our update method.
-        DaoFactory.getAdsDao().updateAd(id, title, description);
-
-        // Redirecting user to ads page after submitting update form.
-        response.sendRedirect("/ads");
+            // Redirecting user to ads page after submitting update form.
+            response.sendRedirect("/ads");
+        }
     }
 }
