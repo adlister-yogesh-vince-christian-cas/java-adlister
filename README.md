@@ -1,9 +1,34 @@
-# Finish Up your Adlister
+# Adlister Project: A craigslist-type App
 
-Follow the instructions and suggestions in [here](https://java.codeup.com/java-iii/finish-the-adlister)
+This is a group project by four students attending Codeup's Full Stack Web Developer Course, Haskell Cohort.
+Developers:
+Vicente
+Yogesh
+Christian
+5T0P5331NM3
 
-## Final branch
+The Adlister is a demo application similar to craigslist.org. 
 
-Use this master branch as a base for your future features, this branch already has all the necessary code implemented up to the lesson on passwords including it's solution.
+This project showcases the new developers learned skills using Java and MySQL.
 
-You might have to change the default branch in your own fork so you can have the master branch as the the default and merge your contributions into it.
+Evaluation of this project required the following output:
+___ Logged in users can view their profile
+
+___ Can fully CRUD users and ads
+
+___ Ad searching and (or) sorting implemented
+
+___ All added features demoed and all app-related questions adequetly addressed
+
+___ At least two of the following features added:
+
+- Nav bar changes based on login / logout
+- Sticky forms
+- Ad show/details page
+- Many-to-many relationship in the application
+
+___ At least one of the following features added:
+
+- Back end validation of form data
+- Error messages
+- Intended redirects
